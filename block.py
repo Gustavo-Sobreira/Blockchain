@@ -9,7 +9,6 @@ class AlteracoesBlockchain:
     def __init__(self):
         self.cores = 0
 
-
     def dificuldade_mineracao(self, tentativa_hash):
         return tentativa_hash.startswith('0')
 
