@@ -54,5 +54,9 @@ class AlteracoesBlockchain:
         ultimo_hash = bancos.pegar_ultimo_hash()
         if ultimo_hash == 0:
             self.criar_bloco_genesis(horario,ultimo_hash)
+
+            #PARA CONTINUAR COM OS DADOS CHAMAMOS O HASH NOVAMENTE E CRIMOS UM NOVO BLOCO
+            ultimo_hash = bancos.pegar_ultimo_hash()
+            self.cria_novo_bloco(conteudo, horario, ultimo_hash)
         else:
             self.cria_novo_bloco(conteudo, horario, ultimo_hash)

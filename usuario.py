@@ -69,5 +69,15 @@ usuario = OpcoesUsuario()
 
 def iniciar_projeto(conteudo):
     usuario.pegar_dados_conexoes()
-    usuario.iniciar_blockchain(conteudo)
+    blockchain.novo_bloco(conteudo)
+    #usuario.iniciar_blockchain(conteudo)
 
+
+
+"""
+
+Limpar código
+Traduzir
+Apresentar arquitetura(Geral -> C# -> Api -> Server -> Block) e estrutura(Interno/ Classes relacionadas)
+
+"""

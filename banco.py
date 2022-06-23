@@ -107,9 +107,8 @@ class ManipularBancos:
         cursor = self.conectar_banco_saida().cursor()
         #SQL insere = f"""INSERT INTO [dbo].[{ManipularBancos.bancoSaida[3]}](Hash_anterior,Hash_atual,Nonce,Conteudo)
         #VALUES('{hash_anterior}','{hash_atual}','{nonce}','{conteudo}');"""
-
         insere = f"""INSERT INTO {ManipularBancos.bancoSaida[3]}(Hash_anterior,Hash_atual,Nonce,Acao)
-                VALUES('{hash_anterior}','{hash_atual}','{nonce}','{conteudo}');"""
+                VALUES("{hash_anterior}","{hash_atual}","{nonce}","{conteudo}");"""
 
         cursor.execute(insere)
         #INSERE OS DADOS NA BLOCKCAHIN
