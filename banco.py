@@ -30,7 +30,7 @@ class ManipularBancos:
         cursor = self.conectar_banco_imutavel().cursor()
         # FAZ A BUSCA NO Banco DE FORMA QUE O ULTIMO ID SEJA SELECIONADO 1°
 
-        #SQL busca = f"""SELECT [Hash_atual] FROM [dbo].[{ManipularBancos.bancoSaida[3]}] ORDER BY ID DESC"""
+        #SQL busca = f"""SELECT [Hash_atual] FROM [dbo].[{ManipularBancos.banco_imutavel[3]}] ORDER BY ID DESC"""
         busca = f"""SELECT Hash_atual FROM {ManipularBancos.banco_imutavel[3]} ORDER BY ID DESC"""
 
         cursor.execute(busca)
@@ -53,7 +53,7 @@ class ManipularBancos:
         #FAZ PEDIDO DE CONEXÃO
         cursor = self.conectar_banco_imutavel().cursor()
 
-        #SQL insere = f"""INSERT INTO [dbo].[{ManipularBancos.bancoSaida[3]}](Hash_anterior,Hash_atual,Nonce,Conteudo)
+        #SQL insere = f"""INSERT INTO [dbo].[{ManipularBancos.banco_imutavel[3]}](Hash_anterior,Hash_atual,Nonce,Acao)
         #VALUES('{hash_anterior}','{hash_atual}','{nonce}','{conteudo}');"""
 
         insere = f"""INSERT INTO {ManipularBancos.banco_imutavel[3]}(Hash_anterior,Hash_atual,Nonce,Acao)

@@ -3,7 +3,8 @@ from flask import Flask, request, redirect,render_template
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST'])
+
+@app.route('/registrazione', methods=['GET', 'POST'])
 def manipula_json():
     #RECEBE O JSON E O PASSA PARA A BLOCKCHAIN
     informacoes = request.json.get("informacoes")

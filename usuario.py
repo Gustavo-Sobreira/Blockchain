@@ -14,14 +14,14 @@ class OpcoesUsuario:
         #RECEBE DADOS DE CONEXÃO COM O BANCO A SER INSERIDO
 
         driver_banco = "MySQL ODBC 8.0 ANSI Driver;"
-        server = "localhost;"
+        name_server = "localhost;"
         database = "blocktest;"
         tabela = "historico_hash"
         user = "root"
         password = ""
 
         #PASSA OS DADOS DE CONEXÃO DO USUÁRIO
-        bancos.armazenar_login_temporario(driver_banco,server,database,tabela,user,password)
+        bancos.armazenar_login_temporario(driver_banco,name_server,database,tabela,user,password)
 
         #TESTA PARA VER SE ALGO DEU ERRADO PARA EVITAR FALHAS DE CONEXÃO AO LOGO DO PROCESSO
         bancos.conectar_banco_imutavel()
